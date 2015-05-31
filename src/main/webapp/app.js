@@ -1,11 +1,26 @@
 Ext.application({
-	name: 'money',
+	name: 'CarCatalog',
+	
+	views: [
+	  'AddCarFormView',
+	  'CarCatalogView',
+	  'CarGridView',
+	  'SearchCarView'
+	],
+	
+	controllers: [
+	  'CarCatalogController'
+	],
+	
+	stores: [
+	  'CarCatalogStore'
+	],
+	
 	launch: function () {
 		Ext.create('Ext.container.Viewport', {
 			layout: 'fit',
 			items: {
-				xtype: 'panel',
-				html: '<h2>Будущий расчет денег</h2>'
+				xtype: 'carCatalogView'
 			}
 		});
 	}
